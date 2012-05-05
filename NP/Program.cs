@@ -31,6 +31,12 @@
 
                 foreach (string filename in filesToOpen)
                 {
+                    if (!File.Exists(filename))
+                    {
+                        Console.Error.WriteLine("Error: Unable to find file \"{0}\"", filename);
+                        continue;
+                    }
+
                     Process.Start(editorPath, filename);
                 }
             }
