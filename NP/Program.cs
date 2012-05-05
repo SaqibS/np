@@ -23,15 +23,20 @@
                     filesToOpen = args;
                 }
 
-                string notepadPath = Path.Combine(Environment.SystemDirectory, "notepad.exe");
+                string editorPath = Environment.GetEnvironmentVariable("editor");
+                if (editorPath==null || editorPath.Trim().Length==0)
+                {
+                    editorPath = Path.Combine(Environment.SystemDirectory, "notepad.exe");
+                }
+
                 foreach (string filename in filesToOpen)
                 {
-                    Process.Start(notepadPath, filename);
+                    Process.Start(editorPath, filename);
                 }
             }
             catch (Exception x)
             {
-                Console.Error.WriteLine("Error: {0}", x.Message);
+                Console.Error.WriteLine("Error: {0} - {1}", x.GetType().Name, x.Message);
             }
         }
     }

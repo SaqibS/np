@@ -12,6 +12,10 @@ Sometimes, I want to examine the output of a command more closely. Copying and p
 
 NP helps here too - simply pipe the command output to NP, and you'll see the output in Notepad. For example: "dir c:\ | np".
 
+## Using a Different Text Editor
+
+In the above, I've talked about Notepad, as that's the text editor I use for reading/simple editing of text files. A friend asked me if I would make it work with other text editors - so now you can specify the full path to your prefered editor in the "editor" environment variable. You can do this in Control Panel -> System -> Advanced -> Environment Variables.
+
 ## Feedback
 
 I wrote this small tool in just a few minutes one afternoon, but found it rather handy - so I'm posting it publicly in case anyone else finds it useful.
