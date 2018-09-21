@@ -1,5 +1,6 @@
 obj
 bin
-*.csproj.user
+.vs
+*.user
 *.suo
 *.cache
